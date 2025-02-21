@@ -16,7 +16,7 @@ Dữ liệu được lưu trữ trong các file CSV, được cập nhật đị
 
 ## Nguyên lý hoạt động
 
-Dự án sử dụng bot tự động để thu thập dữ liệu từ trang web iqair.com với chu kỳ 1 giờ/lần. Các thông tin được thu thập bao gồm:
+Dự án sử dụng bot tự động để thu thập dữ liệu từ trang web Giá vàng của với chu kỳ mỗi ngày 2 lần 11h và 16h. Các thông tin được thu thập bao gồm:
 - Thời gian đo
 - Loại vàng
 - Giá mua vào
@@ -28,29 +28,24 @@ Dự án sử dụng bot tự động để thu thập dữ liệu từ trang we
 Dữ liệu được tổ chức theo cấu trúc thư mục:
 ```
 result/
-├── gold_prices/
-   ├── 
-   ├──
+├──gold_prices/
+   ├── gold_prices_2025_feb.csv
+   ├── gold_prices_2025_mar.csv
+   ├──gold_prices_2025_apr.csv
    └── ...
 
 
 Mỗi file CSV chứa các cột dữ liệu:
 - `timestamp`: Thời gian lấy dữ liệu
-- `city`: Tên thành phố
-- `aqi`: Chỉ số chất lượng không khí
-- `weather`: Điều kiện thời tiết
-- `wind_speed`: Tốc độ gió
+- `gold_type`: Loại vàng
+- `buy_price`: Giá mua vào
+- `sell_price`: Giá bán ra
+- `update_time`: Thời điểm cập nhật giá
 - `humidity`: Độ ẩm
 
 ## Hướng dẫn sử dụng
-
-1. Clone repository này về máy:
-```bash
-git clone https://github.com/nghiahsgs/iqair-dataset.git
-```
-
-2. Dữ liệu thô được lưu trong thư mục `result/` dưới định dạng CSV
-3. Bạn có thể sử dụng các công cụ như Power BI, Python, R để phân tích và trực quan hóa dữ liệu
+Dữ liệu thô được lưu trong thư mục `result/` dưới định dạng CSV
+Bạn có thể sử dụng các công cụ như Power BI, Python, R để phân tích và trực quan hóa dữ liệu
 
 ## Hướng dẫn cài đặt và chạy dự án
 
@@ -75,7 +70,7 @@ playwright install chromium
 
 1. Chạy script crawl dữ liệu:
 ```bash
-python crawl_iqair.py
+python crawl_goldprices.py
 ```
 
 2. Dữ liệu sau khi crawl sẽ được lưu vào thư mục `result/` dưới dạng file CSV

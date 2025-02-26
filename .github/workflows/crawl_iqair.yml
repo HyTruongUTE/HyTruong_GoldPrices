@@ -2,7 +2,7 @@ name: Crawl Gold Price PNJ Data
 
 on:
   schedule:
-    - cron: '*/1 * * * *' 
+    - cron: '*/5 * * * *' 
   #  - cron: '0 4,9 * * *'  # Chạy vào 10h sáng (03 UTC) và 10h tối (15 UTC) theo giờ Việt Nam (GMT+7)
   workflow_dispatch:  # Allow manual trigger
 

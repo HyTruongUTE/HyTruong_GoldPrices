@@ -26,7 +26,6 @@ Dự án sử dụng bot tự động để thu thập dữ liệu từ trang we
 ### Cấu trúc dữ liệu chi tiết
 
 Dữ liệu được tổ chức theo cấu trúc thư mục:
-```
 result/
 ├──gold_prices/
    ├── gold_prices_2025_feb.csv
@@ -57,21 +56,15 @@ Bạn có thể sử dụng các công cụ như Power BI, Python, R để phân
 ### Các bước cài đặt
 
 Cài đặt các thư viện cần thiết:
-```bash
 pip install -r requirements.txt
-```
 
 Cài đặt Chromium cho Playwright:
-```bash
 playwright install chromium
-```
 
 ### Chạy dự án
 
 1. Chạy script crawl dữ liệu:
-```bash
 python crawl_goldprices.py
-```
 
 2. Dữ liệu sau khi crawl sẽ được lưu vào thư mục `result/` dưới dạng file CSV
 

@@ -28,10 +28,8 @@ Dự án sử dụng bot tự động để thu thập dữ liệu từ trang we
 Dữ liệu được tổ chức theo cấu trúc thư mục:
 result/
 ├──gold_prices/
-   ├── gold_prices_2025_feb.csv
-   ├── gold_prices_2025_mar.csv
-   ├──gold_prices_2025_apr.csv
-   └── ...
+   ├── gold_prices_PNJ.csv
+   ├──
 
 
 Mỗi file CSV chứa các cột dữ liệu:
